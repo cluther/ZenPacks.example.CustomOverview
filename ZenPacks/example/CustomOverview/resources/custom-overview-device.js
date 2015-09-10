@@ -7,10 +7,12 @@ Ext.onReady(function() {
     Ext.ComponentMgr.onAvailable(PANEL_ID, function(){
         var panel = Ext.getCmp(PANEL_ID);
 
-        panel.insert(0, {
-            name: 'contact',
-            xtype: 'textfield',
-            fieldLabel: _t('Technical Contact')
+        panel.addListener("afterrender", function(){
+            panel.insert(0, {
+                name: 'contact',
+                xtype: 'textfield',
+                fieldLabel: _t('Technical Contact')
+            });
         });
     });
 });
