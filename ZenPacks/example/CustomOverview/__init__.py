@@ -8,3 +8,9 @@ Device.contact = ''
 
 # Make a device's contact available through the API.
 DeviceInfo.contact = ProxyProperty('contact')
+
+# You can swap ProxyContact with any property/attribute on Device.
+# For example, if you wanted to reference a cProperty instead:
+#DeviceInfo.contact = ProxyProperty('cPropContact')
+# Or a zProperty
+#DeviceInfo.contact = ProxyProperty('zCommandUsername')
